@@ -1,0 +1,11 @@
+<h1 class="my-4"><%= @blog_post.title %></h1>
+
+<%= simple_format(@blog_post.body) %>
+
+<p>Created by: <%= @blog_post.creator.email %>
+<p><%= link_to "Creator Profile", profile_path(@blog_post.creator) %></p>
+
+<p class="mt-4">
+  <%= link_to 'Back', blog_posts_path, class: 'btn btn-outline-primary' %>
+</p>
+
